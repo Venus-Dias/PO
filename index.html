@@ -624,13 +624,21 @@ section { padding:6.5rem 4rem }
 }
 .about-img-col { position:sticky; top:8rem }
 .about-img-frame {
-  width:100%; aspect-ratio:3/4;
-  background:rgba(255,255,255,.04);
-  border:1px solid var(--border-amber);
-  border-radius:3px; overflow:hidden;
-  display:flex; align-items:center; justify-content:center;
+  width: 100%;
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--border-amber);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
 }
-.about-img-frame img { width:100%; height:100%; object-fit:cover; object-position:center top }
+
+.about-img-frame img {
+  width: 100%;
+  min-width: 100%;  /* ← Add this */
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
 .about-img-placeholder {
   font-size:.68rem; letter-spacing:.14em; text-transform:uppercase;
   color:rgba(245,200,66,.3); text-align:center; padding:1rem;
